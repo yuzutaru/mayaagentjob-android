@@ -60,7 +60,12 @@ fun MayaApp(jobRepository: JobRepository, portfolioRepository: PortfolioReposito
         },
     ) { padding ->
         NavHost(navController = navController, startDestination = Destination.Home.route, modifier = Modifier.padding(padding)) {
-            composable(Destination.Home.route) { HomeScreen() }
+            composable(Destination.Home.route) {
+                HomeScreen(
+                    onOpenPortfolio = { navController.navigate(Destination.Portfolio.route) },
+                    onOpenJobs = { navController.navigate(Destination.Jobs.route) },
+                )
+            }
             composable(Destination.Jobs.route) { JobsScreen(jobRepository) }
             composable(Destination.Portfolio.route) { PortfolioScreen(portfolioRepository) }
         }

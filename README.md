@@ -39,3 +39,9 @@ app/src/main/java/com/maya/jobs/
 ## Status
 Scaffold complete: navigation, job search list + pagination, portfolio import/
 save/export, and API integration. Onboarding and LinkedIn-PDF import are next.
+
+## Contract Sync (manual)
+`app/src/main/java/com/maya/jobs/domain/model/HomePortal.kt` is the manually-synced
+twin of the web `HomePortalContract.ts` + `homePortalMockData.ts` (hero, features,
+workSteps, ctaBanners). Update it in lockstep with the web contract and the iOS
+twin (`Maya/APIClient/Models/HomePortal.swift`).
