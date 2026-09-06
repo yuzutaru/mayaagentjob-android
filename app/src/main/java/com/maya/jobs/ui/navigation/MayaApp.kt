@@ -34,7 +34,7 @@ sealed class Destination(val route: String, val label: String, val icon: ImageVe
 @Composable
 fun MayaApp(jobRepository: JobRepository, portfolioRepository: PortfolioRepository) {
     val navController = rememberNavController()
-    val destinations = listOf(Destination.Home, Destination.Jobs, Destination.Portfolio)
+    val destinations = listOf(Destination.Portfolio, Destination.Jobs, Destination.Home)
 
     Scaffold(
         bottomBar = {
